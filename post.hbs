@@ -1,0 +1,165 @@
+{{!< default}}
+
+{{#post}}
+<article class="post-single">
+    
+    {{!-- Hero Header --}}
+    <div class="post-hero">
+        {{#if feature_image}}
+            <img src="{{feature_image}}" alt="{{title}} - {{primary_tag.name}} via Anhangá Viagens" class="post-hero-image" loading="lazy">
+        {{else}}
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600" alt="Destinos de viagem inspiradores - Anhangá Viagens" class="post-hero-image" loading="lazy">
+        {{/if}}
+        <div class="post-hero-overlay"></div>
+        
+        <div class="post-hero-content">
+            <div class="container">
+                <div class="post-hero-inner">
+                    <a href="/" class="back-link">
+                        ← Voltar para o Blog
+                    </a>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        {{#primary_tag}}
+                            <span class="category-badge category-{{slug}}" style="background: rgba(30, 136, 229, 0.2); border: 2px solid var(--color-dark); box-shadow: 4px 4px 0px var(--color-dark); transform: rotate(-1deg);">
+                                🏷️ {{name}}
+                            </span>
+                        {{/primary_tag}}
+                    </div>
+                    
+                    <h1 class="post-hero-title">{{title}}</h1>
+                    
+                    <div class="post-hero-meta">
+                        <div class="post-hero-meta-item">
+                            <div class="post-hero-meta-icon">👤</div>
+                            <span>Por <strong style="color: #fff; border-bottom: 2px solid rgba(255, 217, 61, 0.5);">{{#primary_author}}{{name}}{{/primary_author}}</strong></span>
+                        </div>
+                        <div class="post-hero-meta-item">
+                            <div class="post-hero-meta-icon">📅</div>
+                            <span>{{date format="DD MMM, YYYY"}}</span>
+                        </div>
+                        <div class="post-hero-meta-item">
+                            <div class="post-hero-meta-icon">⏱️</div>
+                            <span>{{reading_time}} min de leitura</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {{!-- Content Area --}}
+    <div class="post-content-wrapper">
+        <div class="container">
+            <div class="post-content-grid">
+                
+                {{!-- Main Content --}}
+                <div class="post-content-main">
+                    
+                    {{!-- Top Meta --}}
+                    <div style="margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #e5e7eb; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            {{#primary_tag}}
+                                <span class="category-badge category-{{slug}}">{{name}}</span>
+                            {{/primary_tag}}
+                            <span style="font-size: 0.75rem; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em;">{{date format="DD MMM, YYYY"}}</span>
+                        </div>
+                    </div>
+                    
+                    {{!-- Post Content --}}
+                    <div class="post-content">
+                        {{content}}
+                    </div>
+                    
+                    {{!-- CTA WhatsApp --}}
+                    <div style="margin-top: 4rem; padding: 2rem; background: rgba(30, 136, 229, 0.05); border-radius: 2rem; border: 1px solid rgba(30, 136, 229, 0.1);">
+                        <p style="font-weight: 700; color: var(--color-dark); margin-bottom: 0.5rem; font-family: var(--font-sans);">Pronto para viver essa experiência?</p>
+                        <p style="margin-bottom: 1.5rem; font-size: 1rem;">Entre em contato e solicite um orçamento personalizado. Vamos planejar cada detalhe para que sua viagem seja inesquecível.</p>
+                        <a href="https://wa.me/551152833309?text=Olá!%20Li%20o%20post%20%22{{title}}%22%20e%20gostaria%20de%20planejar%20minha%20viagem." target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: #25D366; color: white; border-radius: 9999px; font-weight: 700; text-decoration: none; transition: all 0.3s ease;">
+                            💬 Falar no WhatsApp
+                        </a>
+                    </div>
+                    
+                    {{!-- Share Section --}}
+                    <div style="margin-top: 4rem; padding-top: 2.5rem; border-top: 2px dashed #e5e7eb; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+                        <span style="font-weight: 700; color: var(--color-dark); font-size: 1.125rem;">Gostou? Espalhe a palavra:</span>
+                        <div style="display: flex; gap: 0.75rem;">
+                            <a href="https://twitter.com/intent/tweet?url={{url absolute="true"}}&text={{title}}" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; border-radius: 9999px; background: #1DA1F2; color: white; transition: transform 0.3s ease;">
+                                🐦
+                            </a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; border-radius: 9999px; background: #1877F2; color: white; transition: transform 0.3s ease;">
+                                📘
+                            </a>
+                            <a href="https://www.linkedin.com/shareArticle?url={{url absolute="true"}}&title={{title}}" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; border-radius: 9999px; background: #0A66C2; color: white; transition: transform 0.3s ease;">
+                                💼
+                            </a>
+                            <a href="https://api.whatsapp.com/send?text={{title}}%20{{url absolute="true"}}" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; border-radius: 9999px; background: #25D366; color: white; transition: transform 0.3s ease;">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                {{!-- Sidebar --}}
+                <aside class="post-sidebar">
+                    
+                    {{!-- Author Widget --}}
+                    {{#primary_author}}
+                    <div class="author-widget">
+                        <div class="author-widget-avatar">
+                            {{#if profile_image}}
+                                <img src="{{profile_image}}" alt="{{name}}" style="width: 100%; height: 100%; object-fit: cover;">
+                            {{else}}
+                                {{name.[0]}}
+                            {{/if}}
+                        </div>
+                        <h4 class="author-widget-name">{{name}}</h4>
+                        <div class="author-widget-role">Travel Expert</div>
+                        <p class="author-widget-bio">
+                            {{#if bio}}
+                                {{bio}}
+                            {{else}}
+                                "Apaixonado por descobrir lugares novos e compartilhar dicas que não estão nos guias turísticos."
+                            {{/if}}
+                        </p>
+                    </div>
+                    {{/primary_author}}
+                    
+                    {{!-- Related Posts --}}
+                    <div class="related-posts">
+                        <h3 class="related-posts-title">Leia Também</h3>
+                        {{#get "posts" limit="2" filter="id:-{{id}}"}}
+                            {{#foreach posts}}
+                                <a href="{{url}}" class="related-post-item">
+                                    <div class="related-post-image">
+                                        {{#if feature_image}}
+                                            <img src="{{feature_image}}" alt="{{title}}">
+                                        {{else}}
+                                            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=200" alt="{{title}}">
+                                        {{/if}}
+                                    </div>
+                                    <div class="related-post-content">
+                                        <div style="margin-bottom: 0.5rem;">
+                                            {{#primary_tag}}
+                                                <span class="category-badge category-{{slug}}" style="font-size: 0.625rem; padding: 0.125rem 0.5rem;">{{name}}</span>
+                                            {{/primary_tag}}
+                                        </div>
+                                        <h5 class="related-post-title">{{title}}</h5>
+                                        <span class="related-post-meta">
+                                            ⏱️ {{reading_time}} min
+                                        </span>
+                                    </div>
+                                </a>
+                            {{/foreach}}
+                        {{/get}}
+                    </div>
+                    
+                </aside>
+                
+            </div>
+        </div>
+    </div>
+    
+</article>
+{{/post}}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{meta_title}}{{#is "post"}} | {{@site.title}}{{/is}}</title>
+    <meta name="description" content="{{meta_description}}">
+    <meta name="keywords" content="viagens, turismo, destinos, anhangá, brasil, experiências">
+    <link rel="canonical" href="{{url absolute="true"}}">
+    
+    {{!-- Open Graph --}}
+    <meta property="og:title" content="{{meta_title}}">
+    <meta property="og:description" content="{{meta_description}}">
+    <meta property="og:image" content="{{#if feature_image}}{{feature_image}}{{else}}{{@site.cover_image}}{{/if}}">
+    <meta property="og:url" content="{{url absolute="true"}}">
+    <meta property="og:type" content="{{#is "post"}}article{{else}}website{{/is}}">
+    
+    {{!-- Twitter Card --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{meta_title}}">
+    <meta name="twitter:description" content="{{meta_description}}">
+    <meta name="twitter:image" content="{{#if feature_image}}{{feature_image}}{{else}}{{@site.cover_image}}{{/if}}">
+    
+    {{!-- Schema.org --}}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "{{#is "post"}}BlogPosting{{else}}WebSite{{/is}}",
+        "headline": "{{meta_title}}",
+        "description": "{{meta_description}}",
+        "url": "{{url absolute="true"}}",
+        {{#is "post"}}
+        "author": {
+            "@type": "Person",
+            "name": "{{primary_author.name}}"
+        },
+        "datePublished": "{{date format="YYYY-MM-DD"}}",
+        "dateModified": "{{date updated_at format="YYYY-MM-DD"}}",
+        {{/is}}
+        "publisher": {
+            "@type": "Organization",
+            "name": "{{@site.title}}",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{@site.logo}}"
+            }
+        }
+    }
+    </script>
+    
+    {{!-- Google Fonts --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    {{!-- Ghost head --}}
+    {{ghost_head}}
+    
+    {{!-- Theme CSS --}}
+    <link rel="stylesheet" href="{{asset "css/screen.css"}}">
+</head>
+<body class="{{body_class}}">
+    
+    {{!-- Header --}}
+    {{> header}}
+    
+    {{!-- Main Content --}}
+    <main>
+        {{{body}}}
+    </main>
+    
+    {{!-- Footer --}}
+    {{> footer}}
+    
+    {{!-- Ghost foot --}}
+    {{ghost_foot}}
+    
+</body>
+</html>
