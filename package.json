@@ -39,23 +39,6 @@
         "width": 2000
       }
     },
-    "card_assets": true,
-    "custom": {
-      "navigation_layout": {
-        "type": "select",
-        "options": ["Logo on the left", "Logo in the middle"],
-        "default": "Logo on the left"
-      },
-      "title_font": {
-        "type": "select",
-        "options": ["Modern sans-serif", "Elegant serif"],
-        "default": "Modern sans-serif"
-      },
-      "body_font": {
-        "type": "select",
-        "options": ["Modern sans-serif", "Elegant serif"],
-        "default": "Elegant serif"
-      }
-    }
+    "card_assets": true
   }
 }
