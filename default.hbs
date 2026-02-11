@@ -4,13 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}{{#is "post"}} | {{@site.title}}{{/is}}</title>
-    <meta name="description" content="{{meta_description}}">
     <meta name="keywords" content="viagens, turismo, destinos, anhangá, brasil, experiências">
     <link rel="canonical" href="{{url absolute="true"}}">
     
     {{!-- Open Graph --}}
     <meta property="og:title" content="{{meta_title}}">
-    <meta property="og:description" content="{{meta_description}}">
     <meta property="og:image" content="{{#if feature_image}}{{feature_image}}{{else}}{{@site.cover_image}}{{/if}}">
     <meta property="og:url" content="{{url absolute="true"}}">
     <meta property="og:type" content="{{#is "post"}}article{{else}}website{{/is}}">
@@ -18,7 +16,6 @@
     {{!-- Twitter Card --}}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{meta_title}}">
-    <meta name="twitter:description" content="{{meta_description}}">
     <meta name="twitter:image" content="{{#if feature_image}}{{feature_image}}{{else}}{{@site.cover_image}}{{/if}}">
     
     {{!-- Schema.org --}}
@@ -27,7 +24,6 @@
         "@context": "https://schema.org",
         "@type": "{{#is "post"}}BlogPosting{{else}}WebSite{{/is}}",
         "headline": "{{meta_title}}",
-        "description": "{{meta_description}}",
         "url": "{{url absolute="true"}}",
         {{#is "post"}}
         "author": {
