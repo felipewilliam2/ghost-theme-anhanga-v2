@@ -9,14 +9,14 @@ Tudo está pronto. Felipe precisa só confirmar se quer aplicar:
 ## O Que Será Feito
 
 ### 1. Refatorar Agent Config
-**Mudança:** `qwen-vision` → `seo-auditor`
+**Mudança:** `seo-auditor` → `seo-auditor`
 
 **Antes:**
 ```json
 {
-  "id": "qwen-vision",
-  "name": "Qwen Vision",
-  "model": "qwen-portal/vision-model"
+  "id": "seo-auditor",
+  "name": "SEO Auditor",
+  "model": "anthropic/claude-sonnet-4-5"
 }
 ```
 
@@ -99,7 +99,7 @@ Tudo está pronto. Felipe precisa só confirmar se quer aplicar:
 ## Arquivos Já Criados ✅
 
 1. **SOUL.md** (7.7 KB)
-   - `/home/node/.openclaw/agents/qwen-vision/SOUL.md`
+   - `/home/node/.openclaw/agents/seo-auditor/SOUL.md`
    - Personalidade, workflows, estratégia SEO
    - Weekly process: Analyze → Create → Report
 
@@ -134,7 +134,7 @@ Tudo está pronto. Felipe precisa só confirmar se quer aplicar:
 
 ### Para Mim (após confirmação):
 1. Aplicar configuração em openclaw.json
-2. Atualizar subagents em `main` (qwen-vision → seo-auditor)
+2. Atualizar subagents em `main` (seo-auditor → seo-auditor)
 3. Restart gateway
 4. Testar agent em isolamento
 
@@ -151,9 +151,9 @@ Tudo está pronto. Felipe precisa só confirmar se quer aplicar:
 
 ## Perguntas para Felipe
 
-1. **Refatorar agora ou deixar qwen-vision como fallback visual?**
+1. **Refatorar agora ou deixar seo-auditor como fallback visual?**
    - Opção A: Refatorar completamente (seo-auditor só)
-   - Opção B: Manter qwen-vision + criar novo seo-auditor agent
+   - Opção B: Manter seo-auditor + criar novo seo-auditor agent
 
 2. **Ghost CMS - já tem credential file?**
    - Se sim: onde está?

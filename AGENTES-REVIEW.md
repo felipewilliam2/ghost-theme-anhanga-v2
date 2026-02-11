@@ -13,7 +13,7 @@ Data: 2026-02-11 | Analisado com: agenticflow-skills, mcp-builder, skill-creator
 | **claude-coder** | ✅ Bem Configurado | 🟢 Baixa | Integrar coding-agent skill |
 | **perplexity-synthesizer** | ✅ Bem Configurado | 🟡 Média | Ativar web search |
 | **grok-scout** | ✅ Bem Configurado | 🟡 Média | Configurar identity + fallbacks |
-| **gemini-fallback** | ❌ Mal Nomeado | 🔴 Alta | Renomear para qwen-vision |
+| **gemini-fallback** | ❌ Mal Nomeado | 🔴 Alta | Renomear para seo-auditor |
 
 ---
 
@@ -25,7 +25,7 @@ Data: 2026-02-11 | Analisado com: agenticflow-skills, mcp-builder, skill-creator
 ```json
 {
   "primary": "kimi-coding/k2p5",
-  "fallbacks": ["qwen-portal/vision-model"],
+  "fallbacks": ["anthropic/claude-sonnet-4-5"],
   "subagents": 5 agents
 }
 ```
@@ -249,8 +249,8 @@ Data: 2026-02-11 | Analisado com: agenticflow-skills, mcp-builder, skill-creator
 ```json
 {
   "id": "gemini-fallback",
-  "name": "Qwen Vision Fallback",  // ⚠️ MISMATCH!
-  "model": "qwen-portal/vision-model"
+  "name": "SEO Auditor Fallback",  // ⚠️ MISMATCH!
+  "model": "anthropic/claude-sonnet-4-5"
 }
 ```
 
@@ -258,7 +258,7 @@ Data: 2026-02-11 | Analisado com: agenticflow-skills, mcp-builder, skill-creator
 
 **Problemas:**
 - ❌ ID diz "gemini" mas model é "qwen"
-- ❌ Nome é "Qwen Vision Fallback" mas ID sugere Gemini
+- ❌ Nome é "SEO Auditor Fallback" mas ID sugere Gemini
 - ❌ Sem identity completa
 - ❌ Sem fallback configurado
 
@@ -266,8 +266,8 @@ Data: 2026-02-11 | Analisado com: agenticflow-skills, mcp-builder, skill-creator
 
 | # | Melhoria | Impacto | Dificuldade |
 |---|----------|--------|------------|
-| **1** | Renomear para `qwen-vision` | 🔴 Crítico | 🟢 Fácil |
-| **2** | Atualizar `name` para "Qwen Vision" | 🟢 Alto | 🟢 Fácil |
+| **1** | Renomear para `seo-auditor` | 🔴 Crítico | 🟢 Fácil |
+| **2** | Atualizar `name` para "SEO Auditor" | 🟢 Alto | 🟢 Fácil |
 | **3** | Definir identity completa | 🟢 Alto | 🟡 Médio |
 | **4** | Adicionar fallback (Gemini Flash) | 🟢 Alto | 🟢 Fácil |
 | **5** | Integrar `agenticflow-skills` | 🟡 Médio | 🟡 Médio |
@@ -275,10 +275,10 @@ Data: 2026-02-11 | Analisado com: agenticflow-skills, mcp-builder, skill-creator
 **Recomendação:**
 ```json
 {
-  "id": "qwen-vision",
-  "name": "Qwen Vision",
+  "id": "seo-auditor",
+  "name": "SEO Auditor",
   "model": {
-    "primary": "qwen-portal/vision-model",
+    "primary": "anthropic/claude-sonnet-4-5",
     "fallbacks": ["gemini/gemini-2.5-flash-lite"]
   },
   "skills": ["agenticflow-skills"],
@@ -295,7 +295,7 @@ Data: 2026-02-11 | Analisado com: agenticflow-skills, mcp-builder, skill-creator
 ## 🎯 Plano de Ação Priorizado
 
 ### 🔴 **URGENTE** (Hoje)
-1. Renomear `gemini-fallback` → `qwen-vision`
+1. Renomear `gemini-fallback` → `seo-auditor`
 2. Atualizar main: Opus primary + mais fallbacks
 3. Definir identities em todos os agentes
 

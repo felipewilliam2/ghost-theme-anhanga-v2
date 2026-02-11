@@ -28,8 +28,8 @@ Backup criado: `openclaw.json.backup.2026-02-11`
 | **perplexity-synthesizer** | Sem skills | **agenticflow-skills** | 🟢 Alto |
 | **grok-scout** | Sem fallback | **Gemini 3 Pro** fallback | 🟡 Médio |
 | **grok-scout** | Sem skills | **agenticflow-skills** | 🟢 Alto |
-| **gemini-fallback** | ❌ Confuso | **qwen-vision** (refatorado) | 🔴 Crítico |
-| **qwen-vision** | Sem skills | **agenticflow-skills** | 🟢 Alto |
+| **gemini-fallback** | ❌ Confuso | **seo-auditor** (refatorado) | 🔴 Crítico |
+| **seo-auditor** | Sem skills | **agenticflow-skills** | 🟢 Alto |
 
 **Fallbacks Adicionados:**
 ```json
@@ -38,7 +38,7 @@ Backup criado: `openclaw.json.backup.2026-02-11`
 "claude-coder": [Qwen Coder]
 "perplexity-synthesizer": [Claude Sonnet]
 "grok-scout": [Gemini 3 Pro]
-"qwen-vision": [Gemini Flash Lite]
+"seo-auditor": [Gemini Flash Lite]
 ```
 
 ---
@@ -54,7 +54,7 @@ Backup criado: `openclaw.json.backup.2026-02-11`
 | 💻 claude-coder | `/claude-coder/SOUL.md` | Código, construção, ship | 113 |
 | 📚 perplexity-synthesizer | `/perplexity-synthesizer/SOUL.md` | Pesquisa, síntese, fontes | 127 |
 | ⚡ grok-scout | `/grok-scout/SOUL.md` | Raciocínio rápido, padrões | 111 |
-| 👁️ qwen-vision | `/qwen-vision/SOUL.md` | Análise visual, imagens | 135 |
+| 👁️ seo-auditor | `/seo-auditor/SOUL.md` | Análise visual, imagens | 135 |
 
 **Cada SOUL.md inclui:**
 - Who You Are (identidade)
@@ -74,7 +74,7 @@ Backup criado: `openclaw.json.backup.2026-02-11`
 ### 3️⃣ **Skills Integradas** ✅
 
 **Installed Skills:**
-- ✅ `agenticflow-skills` — Integrado em 4 agents (claude-analyst, perplexity-synthesizer, grok-scout, qwen-vision)
+- ✅ `agenticflow-skills` — Integrado em 4 agents (claude-analyst, perplexity-synthesizer, grok-scout, seo-auditor)
 - ✅ `coding-agent` — Integrado em claude-coder
 - ✅ `mcp-builder` — Disponível (não integrado yet)
 - ✅ `skill-creator` — Disponível (para criar novos skills)
@@ -87,7 +87,7 @@ Backup criado: `openclaw.json.backup.2026-02-11`
   "claude-coder": ["coding-agent"],
   "perplexity-synthesizer": ["agenticflow-skills"],
   "grok-scout": ["agenticflow-skills"],
-  "qwen-vision": ["agenticflow-skills"]
+  "seo-auditor": ["agenticflow-skills"]
 }
 ```
 
@@ -159,7 +159,7 @@ Backup criado: `openclaw.json.backup.2026-02-11`
     ├── claude-coder/SOUL.md (✏️ Novo)
     ├── perplexity-synthesizer/SOUL.md (✏️ Novo)
     ├── grok-scout/SOUL.md (✏️ Novo)
-    └── qwen-vision/ (📁 Novo diretório)
+    └── seo-auditor/ (📁 Novo diretório)
         ├── agent/ (📁 Novo)
         └── SOUL.md (✏️ Novo)
 
@@ -180,7 +180,7 @@ Backup criado: `openclaw.json.backup.2026-02-11`
 - [x] Fallbacks configurados para todos
 - [x] Identity completa para todos
 - [x] Web search ativado para perplexity-synthesizer
-- [x] Agent qwen-vision refatorado (era gemini-fallback)
+- [x] Agent seo-auditor refatorado (era gemini-fallback)
 - [x] Main agent com 4 fallbacks (antes tinha 1)
 
 ---

@@ -40,5 +40,8 @@
       }
     },
     "card_assets": true
+  },
+  "dependencies": {
+    "qmd": "https://github.com/tobi/qmd"
   }
 }
