@@ -82,7 +82,7 @@
    - If missing: Diagnostic may not have generated report; may need manual investigation
 
 4. ✅ **SEO Auditor Refactoring** (completed 2026-02-11 07:32 UTC)
-   - Refactored qwen-vision → seo-auditor
+   - Refactored seo-auditor → seo-auditor
    - ✅ Found GSC credentials (OAuth) + GA4 Service Account
    - ✅ Created comprehensive SOUL.md with SEO strategy + workflows
    - ✅ Installed skills: sickn33-seo-audit, davila7-seo-fundamentals
@@ -93,7 +93,7 @@
      - AV SITE repository URL + credentials (SSH/PAT)
    - ✅ Provided (Ghost URL+Admin key, AV SITE repo URL+token)
    - ✅ Config applied + gateway restarted (2026-02-11 08:15 UTC)
-   - ✅ `seo-auditor` added; `qwen-vision` removed; main can delegate to seo-auditor
+   - ✅ `seo-auditor` added; `seo-auditor` removed; main can delegate to seo-auditor
    - ✅ Skill `sickn33-seo-audit` installed (universal skill store)
    - Next: run smoke-test (trend→outline→Ghost draft)
 
@@ -107,7 +107,7 @@
 3. ✅ Skills integrated (agenticflow, coding-agent, seo-audit, seo-fundamentals)
 4. ✅ Config updated (main: Haiku 4.5, fallbacks for all, identities defined)
 5. ✅ Cron job: Switch main to Kimi K2.5 on Feb 15
-6. ✅ SEO Auditor refactoring (qwen-vision → seo-auditor, ready to deploy)
+6. ✅ SEO Auditor refactoring (seo-auditor → seo-auditor, ready to deploy)
 
 **Score Improvement:** 6.5/10 → 9/10
 
