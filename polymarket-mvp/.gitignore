@@ -1,0 +1,16 @@
+# MVP outputs
+/data/*
+
+# keep directory structure
+!/data/
+!/data/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs / reports
+/reports/
+/notebooks/
+
+# If you later want to version small metadata only, adjust this.
